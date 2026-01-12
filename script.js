@@ -1,4 +1,14 @@
-function getFormvalue() {
-    //Write your code here
+function getFormvalue(event) {
+    event.preventDefault(); 
 
+    let firstName = document.querySelector("input[name=fname]").value.trim();
+    let lastName = document.querySelector("input[name=lname]").value.trim();
+
+    if(firstName && lastName){
+		alert(firstName + " " + lastName);
+	}
+	else{
+		alert("Enter Values");
+	}
+	
 }
